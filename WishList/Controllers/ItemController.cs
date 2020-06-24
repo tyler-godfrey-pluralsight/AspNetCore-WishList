@@ -16,7 +16,7 @@ namespace WishList.Controllers
             _context = dbContext;
         }
 
-        public IActionResult Index()
+        public IActionResult Index() 
         {
             return View("Index");
         }
