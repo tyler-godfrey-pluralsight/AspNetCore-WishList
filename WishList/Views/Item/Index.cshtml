@@ -1,0 +1,20 @@
+﻿@model List<WishList.Models.Item>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Wishlist</h1>
+    <a asp-actoin="Create">Add item</a>
+    <ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Description  <a asp-action="delete" asp-route-id="@item.Id">delete</a></li>
+    }
+    </ul>
+</body>
+</html>
